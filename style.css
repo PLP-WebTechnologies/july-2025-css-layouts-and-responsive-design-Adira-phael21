@@ -1,0 +1,93 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+  background: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Navigation (Flexbox) */
+.site-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem;
+  background: #444;
+}
+.site-nav a {
+  color: white;
+  text-decoration: none;
+}
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Grid Layout for Main */
+.site-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+.content {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+}
+.sidebar {
+  background: #eee;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Cards (Flexbox) */
+.card-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.card {
+  flex: 1 1 150px;
+  background: #ddd;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* Footer */
+.site-footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .site-main {
+    grid-template-columns: 1fr;
+  }
+  .site-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    flex-direction: column;
+  }
+  .site-header h1 {
+    font-size: 1.5rem;
+  }
+}
